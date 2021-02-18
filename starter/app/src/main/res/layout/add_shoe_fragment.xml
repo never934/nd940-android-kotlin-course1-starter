@@ -40,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hint="@string/add_shoe_size"
-                app:inputType="number"
+                app:inputType="text"
                 app:digits="01234567890."
                 app:isNextIme="true"/>
 

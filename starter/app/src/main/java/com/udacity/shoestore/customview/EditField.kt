@@ -41,7 +41,6 @@ class EditField @JvmOverloads constructor(context: Context, attrs: AttributeSet?
             if(isNextImeOptions)editText.imeOptions = EditorInfo.IME_ACTION_NEXT else editText.imeOptions = EditorInfo.IME_ACTION_DONE
             if(isDoneImeOptions)editText.imeOptions = EditorInfo.IME_ACTION_DONE
             hint?.let { editTextInputLayout.hint = it }
-            digits?.let { editText.keyListener = DigitsKeyListener.getInstance(it) }
             when(inputType){
                 "number" -> editText.inputType = InputType.TYPE_CLASS_NUMBER
                 "text" -> editText.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS
@@ -50,6 +49,7 @@ class EditField @JvmOverloads constructor(context: Context, attrs: AttributeSet?
                     editText.transformationMethod = PasswordTransformationMethod()
                 }
             }
+            digits?.let { editText.keyListener = DigitsKeyListener.getInstance(it) }
         } finally {
             ta.recycle()
         }
