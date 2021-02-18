@@ -2,6 +2,11 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="addShoeViewModel"
+            type="com.udacity.shoestore.screens.addshoe.AddShoeViewModel" />
+    </data>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -10,13 +15,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <com.udacity.shoestore.customview.ImageView
                 android:id="@+id/addShoeImageView"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/photo_height"
-                android:clickable="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_preview" />
+                android:layout_height="wrap_content"
+                app:bindingImage="@{addShoeViewModel.shoeImage}" />
 
             <com.udacity.shoestore.customview.EditField
                 android:id="@+id/addShoeNameField"
@@ -24,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/top_indent"
                 app:hint="@string/add_shoe_name"
+                app:bindingText="@={addShoeViewModel.shoeName}"
                 app:inputType="text"
                 app:isNextIme="true"/>
 
@@ -32,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hint="@string/add_shoe_company"
+                app:bindingText="@={addShoeViewModel.shoeCompany}"
                 app:inputType="text"
                 app:isNextIme="true"/>
 
@@ -40,6 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hint="@string/add_shoe_size"
+                app:bindingText="@={addShoeViewModel.shoeSize}"
                 app:inputType="text"
                 app:digits="01234567890."
                 app:isNextIme="true"/>
@@ -49,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hint="@string/add_shoe_description"
+                app:bindingText="@={addShoeViewModel.shoeDescription}"
                 app:inputType="text"
                 app:isDoneIme="true"/>
             <Button

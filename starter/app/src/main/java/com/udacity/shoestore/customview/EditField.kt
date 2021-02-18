@@ -1,15 +1,14 @@
 package com.udacity.shoestore.customview
 
 import android.content.Context
-import android.text.Editable
 import android.text.InputType
-import android.text.TextWatcher
 import android.text.method.DigitsKeyListener
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
+import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.udacity.shoestore.R
@@ -52,10 +51,21 @@ class EditField @JvmOverloads constructor(context: Context, attrs: AttributeSet?
             digits?.let { editText.keyListener = DigitsKeyListener.getInstance(it) }
         } finally {
             ta.recycle()
+
         }
     }
 
-    fun getText() : String{
+    fun getText() : String {
         return editText.text.toString()
+    }
+
+    fun setText(text: String?){
+        text?.let {
+            editText.setText(it, TextView.BufferType.EDITABLE)
+        }
+    }
+
+    fun getEditText() : EditText{
+        return editText
     }
 }

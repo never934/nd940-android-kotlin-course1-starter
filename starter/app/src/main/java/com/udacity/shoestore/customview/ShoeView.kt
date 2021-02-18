@@ -1,21 +1,12 @@
 package com.udacity.shoestore.customview
 
 import android.content.Context
-import android.graphics.Bitmap
-import android.text.InputType
-import android.text.method.DigitsKeyListener
 import android.util.AttributeSet
 import android.view.View
-import android.view.inputmethod.EditorInfo
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 import com.udacity.shoestore.R
 import com.udacity.shoestore.base.BaseCustomView
 import com.udacity.shoestore.models.Shoe
-import org.w3c.dom.Text
 
 class ShoeView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, private val shoe: Shoe?) :
     BaseCustomView(context, attrs, defStyleAttr) {
@@ -45,6 +36,6 @@ class ShoeView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
         shoeCompany.text = String.format(context.getString(R.string.shoe_company), shoe.company)
         shoeSize.text = String.format(context.getString(R.string.shoe_size), shoe.size ?: "")
         shoeDescription.text = String.format(context.getString(R.string.shoe_description), shoe.description)
-        shoe.image?.let { imageView.setImageBitmap(it) }
+        imageView.setImage(shoe.image)
     }
 }

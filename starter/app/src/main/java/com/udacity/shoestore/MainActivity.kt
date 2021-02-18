@@ -1,31 +1,28 @@
 package com.udacity.shoestore
 
-import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.Fragment
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
-import timber.log.Timber
+import com.udacity.shoestore.databinding.MainActivityBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private var navHostFragment: Fragment? = null
+    private lateinit var binding: MainActivityBinding
     private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        Timber.plant(Timber.DebugTree())
+        binding = DataBindingUtil.setContentView(this, R.layout.main_activity);
         NavigationUI.setupActionBarWithNavController(this, findNavController(R.id.nav_host_fragment))
         appBarConfiguration = AppBarConfiguration(setOf(R.id.loginFragment, R.id.shoesFragment))
         setupActionBarWithNavController(findNavController(R.id.nav_host_fragment), appBarConfiguration)
-        navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -33,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if(navHostFragment?.childFragmentManager?.backStackEntryCount == 0){
+        if(supportFragmentManager.primaryNavigationFragment?.childFragmentManager?.backStackEntryCount == 0){
             openExitDialog()
         }else{
             super.onBackPressed()

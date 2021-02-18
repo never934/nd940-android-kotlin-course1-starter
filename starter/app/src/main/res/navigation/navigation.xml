@@ -66,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/addShoeFragment"
-        android:name="com.udacity.shoestore.screens.AddShoeFragment"
+        android:name="com.udacity.shoestore.screens.addshoe.AddShoeFragment"
         android:label="@string/add_shoe_app_bar">
         <action
             android:id="@+id/action_addShoeFragment_to_shoesFragment"
