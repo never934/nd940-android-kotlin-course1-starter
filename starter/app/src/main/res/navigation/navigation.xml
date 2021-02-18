@@ -8,25 +8,23 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.udacity.shoestore.screens.LoginFragment"
-        android:label="LoginFragment">
+        android:label="@string/login_app_bar">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment"
-            />
+            app:destination="@id/welcomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.udacity.shoestore.screens.WelcomeFragment"
-        android:label="WelcomeFragment">
+        android:label="@string/welcome_app_bar">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionsFragment"
-            app:destination="@id/instructionsFragment"
-            />
+            app:destination="@id/instructionsFragment" />
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
         android:name="com.udacity.shoestore.screens.InstructionsFragment"
-        android:label="InstructionsFragment">
+        android:label="@string/instructions_app_bar">
         <action
             android:id="@+id/action_instructionsFragment_to_shoesFragment"
             app:destination="@id/shoesFragment"
@@ -36,11 +34,24 @@
     <fragment
         android:id="@+id/shoesFragment"
         android:name="com.udacity.shoestore.screens.ShoesFragment"
-        android:label="ShoesFragment" >
+        android:label="@string/shoes_app_bar">
         <action
             android:id="@+id/action_shoesFragment_to_loginFragment"
             app:destination="@id/loginFragment"
             app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_shoesFragment_to_addShoeFragment"
+            app:destination="@id/addShoeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShoeFragment"
+        android:name="com.udacity.shoestore.screens.AddShoeFragment"
+        android:label="@string/add_shoe_app_bar">
+        <action
+            android:id="@+id/action_addShoeFragment_to_shoesFragment"
+            app:destination="@id/shoesFragment"
+            app:popUpTo="@id/shoesFragment"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

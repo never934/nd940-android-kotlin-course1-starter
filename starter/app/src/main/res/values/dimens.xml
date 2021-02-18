@@ -3,6 +3,7 @@
     <dimen name="left_indent">16dp</dimen>
     <dimen name="right_indent">16dp</dimen>
     <dimen name="top_indent">16dp</dimen>
+    <dimen name="bottom_indent">16dp</dimen>
     <dimen name="top_half_indent">8dp</dimen>
     <dimen name="bottom_half_indent">8dp</dimen>
     <dimen name="interior_indent">16dp</dimen>

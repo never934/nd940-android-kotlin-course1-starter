@@ -33,6 +33,10 @@ class MainViewModel : ViewModel() {
         _shoes.value?.add(shoe)
     }
 
+    fun clean(){
+        _shoes.value?.clear()
+    }
+
     override fun onCleared() {
         super.onCleared()
         imagesController.clean()

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/addShoeImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/image_interior_indent"
+                android:src="@drawable/ic_question"
+                android:background="@color/hint"/>
+
+            <com.udacity.shoestore.customview.EditField
+                android:id="@+id/addShoeNameField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_indent"
+                app:hint="@string/add_shoe_name"
+                app:inputType="text"
+                app:isNextIme="true"/>
+
+            <com.udacity.shoestore.customview.EditField
+                android:id="@+id/addShoeCompanyField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/add_shoe_company"
+                app:inputType="text"
+                app:isNextIme="true"/>
+
+            <com.udacity.shoestore.customview.EditField
+                android:id="@+id/addShoeSizeField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/add_shoe_size"
+                app:inputType="number"
+                app:digits="01234567890."
+                app:isNextIme="true"/>
+
+            <com.udacity.shoestore.customview.EditField
+                android:id="@+id/addShoeDescriptionField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/add_shoe_description"
+                app:inputType="text"
+                app:isDoneIme="true"/>
+            <Button
+                android:id="@+id/addShoeButton"
+                style="@style/light_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bottom_half_indent"
+                android:text="@string/add_shoe_button" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

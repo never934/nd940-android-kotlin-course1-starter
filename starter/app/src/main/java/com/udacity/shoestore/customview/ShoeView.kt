@@ -17,7 +17,7 @@ import com.udacity.shoestore.base.BaseCustomView
 import com.udacity.shoestore.models.Shoe
 import org.w3c.dom.Text
 
-class ShoeView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
+class ShoeView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, private val shoe: Shoe?) :
     BaseCustomView(context, attrs, defStyleAttr) {
 
     private lateinit var imageView: ImageView
@@ -37,12 +37,13 @@ class ShoeView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
         shoeCompany = view.findViewById(R.id.shoeCompanyView) as TextView
         shoeSize = view.findViewById(R.id.shoeSizeView) as TextView
         shoeDescription = view.findViewById(R.id.shoeDescriptionView) as TextView
+        shoe?.let { setShoe(it, null) }
     }
 
     private fun setShoe(shoe: Shoe, bitmap: Bitmap?){
         shoeName.text = String.format(context.getString(R.string.shoe_name), shoe.name)
         shoeCompany.text = String.format(context.getString(R.string.shoe_company), shoe.company)
-        shoeSize.text = String.format(context.getString(R.string.shoe_size), shoe.size)
+        shoeSize.text = String.format(context.getString(R.string.shoe_size), shoe.size ?: "")
         shoeDescription.text = String.format(context.getString(R.string.shoe_description), shoe.description)
         bitmap?.let {
             imageView.setImageBitmap(bitmap)

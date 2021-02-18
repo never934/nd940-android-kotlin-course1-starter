@@ -54,4 +54,8 @@ class EditField @JvmOverloads constructor(context: Context, attrs: AttributeSet?
             ta.recycle()
         }
     }
+
+    fun getText() : String{
+        return editText.text.toString()
+    }
 }
