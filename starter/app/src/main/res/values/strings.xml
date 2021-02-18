@@ -17,5 +17,9 @@
     <string name="instructions_first_body">1. create shoe with tapping on FAB ➕</string>
     <string name="instructions_second_body">2. see it in the list, and enjoy! 🤪</string>
     <string name="go_to_shoes">go to shoes list!</string>
+    <string name="shoe_name">name: %s</string>
+    <string name="shoe_company">company: %s</string>
+    <string name="shoe_size">size: %s</string>
+    <string name="shoe_description">description: %s</string>
 
 </resources>
