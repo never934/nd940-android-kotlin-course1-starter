@@ -1,3 +1,46 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+
+    <!-- common !-->
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+
+    <!-- login fragment !-->
+    <string name="login_app_bar">Login</string>
+    <string name="sign_in">sign in</string>
+    <string name="sign_up">sign up</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+
+    <!-- welcome fragment !-->
+    <string name="welcome_app_bar">Welcome</string>
+    <string name="welcome_title">Welcome!</string>
+    <string name="welcome_body">Shoes store is open!\nWe are glad to see you 😊</string>
+    <string name="see_instructions">see instructions</string>
+
+    <!-- instructions fragment !-->
+    <string name="instructions_app_bar">Instructions</string>
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions_first_body">1. create shoe with tapping on FAB ➕</string>
+    <string name="instructions_second_body">2. see it in the list, and enjoy! 🤪</string>
+
+    <!-- shoes fragment !-->
+    <string name="shoes_app_bar">Shoes</string>
+    <string name="go_to_shoes">go to shoes list!</string>
+    <string name="shoe_name">name: %s</string>
+    <string name="shoe_company">company: %s</string>
+    <string name="shoe_size">size: %s</string>
+    <string name="shoe_description">description: %s</string>
+
+    <!-- add shoe fragment !-->
+    <string name="add_shoe_app_bar">Add shoe</string>
+    <string name="add_shoe_button">add shoe</string>
+    <string name="add_shoe_description">Description</string>
+    <string name="add_shoe_size">Size</string>
+    <string name="add_shoe_company">Company</string>
+    <string name="add_shoe_name">Name</string>
+
+    <!-- Main activity !-->
+    <string name="exit_dialog_title">Exit from app?</string>
+
 </resources>

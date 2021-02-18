@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/firstBodyView"
+                style="@style/body_text_view_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_indent"
+                android:layout_marginTop="@dimen/top_indent"
+                android:layout_marginEnd="@dimen/right_indent"
+                android:text="@string/instructions_first_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/secondBodyView"
+                style="@style/body_text_view_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions_second_body"
+                android:layout_marginStart="@dimen/left_indent"
+                android:layout_marginTop="@dimen/top_half_indent"
+                android:layout_marginEnd="@dimen/right_indent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstBodyView" />
+
+            <Button
+                android:id="@+id/showShoesBtn"
+                style="@style/light_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/go_to_shoes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/top_half_indent"
+                android:layout_marginBottom="@dimen/bottom_half_indent"
+                android:layout_marginEnd="@dimen/right_indent"
+                android:layout_marginStart="@dimen/left_indent"
+                app:layout_constraintTop_toBottomOf="@+id/secondBodyView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
