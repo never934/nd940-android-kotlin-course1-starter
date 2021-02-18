@@ -13,29 +13,23 @@
         android:layout_marginStart="@dimen/left_indent"
         android:layout_marginEnd="@dimen/right_indent"
         android:text="@string/welcome_title"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/title_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35000002" />
+        app:layout_constraintVertical_bias="0.35"
+        style="@style/title_text_view_style" />
 
     <TextView
         android:id="@+id/welcomeBodyView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/left_indent"
-        android:layout_marginTop="@dimen/top_half_indent"
-        android:layout_marginEnd="@dimen/right_indent"
         android:text="@string/welcome_body"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/default_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeTitleView" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTitleView"
+        style="@style/body_text_view_style" />
 
     <Button
         android:id="@+id/seeInstructionsButton"

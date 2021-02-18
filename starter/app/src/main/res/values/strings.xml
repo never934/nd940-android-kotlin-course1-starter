@@ -1,10 +1,21 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+
+    <!-- login fragment !-->
     <string name="sign_in">sign in</string>
     <string name="sign_up">sign up</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="welcome_body">Shoes store is open!\nWe are glad to see you 😊</string>
+
+    <!-- welcome fragment !-->
     <string name="welcome_title">Welcome!</string>
+    <string name="welcome_body">Shoes store is open!\nWe are glad to see you 😊</string>
     <string name="see_instructions">see instructions</string>
+
+    <!-- instructions fragment !-->
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions_first_body">1. create shoe with tapping on FAB ➕</string>
+    <string name="instructions_second_body">2. see it in the list, and enjoy! 🤪</string>
+    <string name="go_to_shoes">go to shoes list!</string>
+
 </resources>

@@ -37,5 +37,19 @@
         <item name="android:textColor">@color/primaryColor</item>
     </style>
 
+    <style name="title_text_view_style">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+
+    <style name="body_text_view_style">
+        <item name="android:layout_marginStart">@dimen/left_indent</item>
+        <item name="android:layout_marginTop">@dimen/top_half_indent</item>
+        <item name="android:layout_marginEnd">@dimen/right_indent</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
 
 </resources>
