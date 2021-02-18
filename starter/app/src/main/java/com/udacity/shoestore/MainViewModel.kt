@@ -21,8 +21,10 @@ class MainViewModel : ViewModel() {
         _shoes.value = ArrayList()
     }
 
-    fun addShoe(shoe: Shoe){
-        _shoes.value?.add(shoe)
+    fun addShoe(shoe: Shoe?){
+        shoe?.let {
+            _shoes.value?.add(it)
+        }
     }
 
     fun clean(){

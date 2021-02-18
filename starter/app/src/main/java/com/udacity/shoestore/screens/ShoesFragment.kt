@@ -7,11 +7,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.MainViewModel
 import com.udacity.shoestore.R
 import com.udacity.shoestore.customview.ShoeView
-import com.udacity.shoestore.databinding.LoginFragmentBinding
 import com.udacity.shoestore.databinding.ShoesFragmentBinding
 
 class ShoesFragment : Fragment() {
@@ -30,9 +28,9 @@ class ShoesFragment : Fragment() {
         )
         setHasOptionsMenu(true)
         viewModel.shoes.observe(this, Observer {
-            it.forEach { shoeItem ->
-                val shoe = ShoeView(requireContext(), null, 0, shoeItem)
-                binding.shoesLayout.addView(shoe)
+            it.forEach { shoeModel ->
+                binding.shoeItem = ShoeView(requireContext(), null, 0, shoeModel)
+                binding.shoesLayout.addView(binding.shoeItem)
             }
         })
         binding.shoeAddFab.setOnClickListener { findNavController().navigate(ShoesFragmentDirections.actionShoesFragmentToAddShoeFragment()) }
