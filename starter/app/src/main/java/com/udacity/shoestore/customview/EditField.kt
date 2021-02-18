@@ -5,6 +5,7 @@ import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
 import android.text.method.DigitsKeyListener
+import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
 import android.view.View
 import android.view.inputmethod.EditorInfo
@@ -12,9 +13,10 @@ import android.widget.EditText
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.udacity.shoestore.R
+import com.udacity.shoestore.base.BaseCustomView
 
 class EditField @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-    TextInputLayout(context, attrs, defStyleAttr) {
+    BaseCustomView(context, attrs, defStyleAttr) {
 
     private lateinit var editTextInputLayout: TextInputLayout
     private lateinit var editText: TextInputEditText
@@ -43,6 +45,10 @@ class EditField @JvmOverloads constructor(context: Context, attrs: AttributeSet?
             when(inputType){
                 "number" -> editText.inputType = InputType.TYPE_CLASS_NUMBER
                 "text" -> editText.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS
+                "password" -> {
+                    editText.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS
+                    editText.transformationMethod = PasswordTransformationMethod()
+                }
             }
         } finally {
             ta.recycle()

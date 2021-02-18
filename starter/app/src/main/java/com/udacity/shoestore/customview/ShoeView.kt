@@ -13,11 +13,12 @@ import androidx.cardview.widget.CardView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.udacity.shoestore.R
+import com.udacity.shoestore.base.BaseCustomView
 import com.udacity.shoestore.models.Shoe
 import org.w3c.dom.Text
 
 class ShoeView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-    CardView(context, attrs, defStyleAttr) {
+    BaseCustomView(context, attrs, defStyleAttr) {
 
     private lateinit var imageView: ImageView
     private lateinit var shoeName: TextView

@@ -10,6 +10,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:hint="@string/login"
+                app:isNextIme="true"
+                app:inputType="text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +23,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:hint="@string/password"
+                app:isDoneIme="true"
+                app:inputType="password"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/loginEditField" />
