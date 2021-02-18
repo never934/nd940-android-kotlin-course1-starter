@@ -20,4 +20,16 @@
         <item name="android:textSize">10sp</item>
     </style>
 
+    <style name="default_button">
+        <item name="android:layout_marginStart">@dimen/left_indent</item>
+        <item name="android:layout_marginEnd">@dimen/right_indent</item>
+        <item name="android:padding">@dimen/interior_indent</item>
+    </style>
+
+    <style name="light_button" parent="default_button">
+        <item name="android:backgroundTint">@color/secondaryColor</item>
+        <item name="android:textColor">@color/primaryColor</item>
+    </style>
+
+
 </resources>

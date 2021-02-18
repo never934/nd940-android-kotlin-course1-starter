@@ -5,7 +5,7 @@
     style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/default_padding"
+    android:layout_marginStart="@dimen/left_indent"
     android:textColorHint="@drawable/edit_field_box_selector"
     app:boxBackgroundColor="@android:color/white"
     app:boxStrokeColor="@drawable/edit_field_box_selector"
@@ -25,7 +25,7 @@
         android:focusable="true"
         android:fontFamily="@font/roboto"
         android:letterSpacing="0.01"
-        android:paddingStart="@dimen/start_padding"
+        android:paddingStart="@dimen/start_indent"
         android:textColor="@android:color/black"
         android:textCursorDrawable="@null"
         android:textSize="@dimen/default_text_size" />
