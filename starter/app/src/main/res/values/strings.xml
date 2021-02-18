@@ -4,6 +4,7 @@
     <string name="sign_up">sign up</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="welcome_body">Shoes store is open! \n We are glad to see you 😊</string>
+    <string name="welcome_body">Shoes store is open!\nWe are glad to see you 😊</string>
     <string name="welcome_title">Welcome!</string>
+    <string name="see_instructions">see instructions</string>
 </resources>
