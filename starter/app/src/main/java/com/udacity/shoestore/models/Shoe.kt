@@ -1,5 +1,6 @@
 package com.udacity.shoestore.models
 
+import android.graphics.Bitmap
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
@@ -9,5 +10,5 @@ data class Shoe(
     var size: Double?,
     var company: String,
     var description: String,
-    var imageId: String?
+    var image: Bitmap?
 ) : Parcelable

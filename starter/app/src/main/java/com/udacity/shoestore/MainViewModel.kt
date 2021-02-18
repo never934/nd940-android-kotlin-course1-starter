@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
-import com.udacity.shoestore.utils.ImagesCacheController
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -18,18 +17,11 @@ class MainViewModel : ViewModel() {
         it.toList()
     }
 
-    private val imagesController: ImagesCacheController = ImagesCacheController()
-
     init {
         _shoes.value = ArrayList()
     }
 
-    fun addShoe(shoe: Shoe, image: Bitmap?){
-        image?.let {
-            val imageId = UUID.randomUUID().toString()
-            imagesController.saveBitmap(imageId, it)
-            shoe.imageId = imageId
-        }
+    fun addShoe(shoe: Shoe){
         _shoes.value?.add(shoe)
     }
 
@@ -39,6 +31,6 @@ class MainViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
-        imagesController.clean()
     }
+
 }

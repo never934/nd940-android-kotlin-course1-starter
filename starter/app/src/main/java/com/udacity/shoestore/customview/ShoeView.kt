@@ -37,16 +37,14 @@ class ShoeView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
         shoeCompany = view.findViewById(R.id.shoeCompanyView) as TextView
         shoeSize = view.findViewById(R.id.shoeSizeView) as TextView
         shoeDescription = view.findViewById(R.id.shoeDescriptionView) as TextView
-        shoe?.let { setShoe(it, null) }
+        shoe?.let { setShoe(it) }
     }
 
-    private fun setShoe(shoe: Shoe, bitmap: Bitmap?){
+    private fun setShoe(shoe: Shoe){
         shoeName.text = String.format(context.getString(R.string.shoe_name), shoe.name)
         shoeCompany.text = String.format(context.getString(R.string.shoe_company), shoe.company)
         shoeSize.text = String.format(context.getString(R.string.shoe_size), shoe.size ?: "")
         shoeDescription.text = String.format(context.getString(R.string.shoe_description), shoe.description)
-        bitmap?.let {
-            imageView.setImageBitmap(bitmap)
-        }
+        shoe.image?.let { imageView.setImageBitmap(it) }
     }
 }

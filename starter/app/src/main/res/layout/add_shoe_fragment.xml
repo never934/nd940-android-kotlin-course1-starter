@@ -13,10 +13,10 @@
             <ImageView
                 android:id="@+id/addShoeImageView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/image_interior_indent"
-                android:src="@drawable/ic_question"
-                android:background="@color/hint"/>
+                android:layout_height="@dimen/photo_height"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_preview" />
 
             <com.udacity.shoestore.customview.EditField
                 android:id="@+id/addShoeNameField"
