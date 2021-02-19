@@ -27,6 +27,6 @@ class ShoeView @JvmOverloads constructor(
     private fun init(attrs: AttributeSet?, context: Context) {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         binding = DataBindingUtil.inflate(inflater, R.layout.item_shoe, this, true)
-        shoe?.let { binding.shoe = it; binding.invalidateAll() }
+        shoe?.let { binding.shoe = it; }
     }
 }
