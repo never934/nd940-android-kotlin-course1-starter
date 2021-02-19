@@ -16,7 +16,7 @@ class AddShoeViewModel : ViewModel() {
     fun getShoe() : Shoe {
         return Shoe(
             name = shoeName.value ?: "",
-            size = shoeSize.value?.toDoubleOrNull() ,
+            size = shoeSize.value ?: "" ,
             company = shoeCompany.value ?: "",
             description = shoeDescription.value ?: "",
             image = shoeImage.value

@@ -7,7 +7,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Shoe(
     var name: String,
-    var size: Double?,
+    var size: String,
     var company: String,
     var description: String,
     var image: Bitmap?

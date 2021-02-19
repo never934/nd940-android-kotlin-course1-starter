@@ -1,55 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Used CardView for bordering, elevation, and radius-->
-<androidx.cardview.widget.CardView
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/left_indent"
-    android:layout_marginEnd="@dimen/right_indent"
-    android:layout_marginBottom="@dimen/bottom_indent"
-    app:cardElevation="4dp"
-    app:cardCornerRadius="10dp">
-    <!-- Used linearLayout with vertical orientation, because we don't need to use difficult
-    constraints in this screen. For powerful performance with 1,2 or stack of items we can use
-    linearLayout instead constraintLayout!-->
-    <LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+    <!-- Used CardView for bordering, elevation, and radius-->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <com.udacity.shoestore.customview.ImageView
-            android:id="@+id/shoeImageView"
+        android:layout_marginStart="@dimen/left_indent"
+        android:layout_marginEnd="@dimen/right_indent"
+        android:layout_marginBottom="@dimen/bottom_indent"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp">
+        <!-- Used linearLayout with vertical orientation, because we don't need to use difficult
+        constraints in this screen. For powerful performance with 1,2 or stack of items we can use
+        linearLayout instead constraintLayout!-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
-        <TextView
-            android:id="@+id/shoeNameView"
-            style="@style/text_view_in_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/shoe_name"
-            />
-        <TextView
-            android:id="@+id/shoeCompanyView"
-            style="@style/text_view_in_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/shoe_company"
-            />
-        <TextView
-            android:id="@+id/shoeSizeView"
-            style="@style/text_view_in_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/shoe_size"
-            />
-        <TextView
-            android:id="@+id/shoeDescriptionView"
-            style="@style/text_view_in_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/bottom_half_indent"
-            android:text="@string/shoe_description"
-            />
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+            android:orientation="vertical">
+            <com.udacity.shoestore.customview.ImageView
+                android:id="@+id/shoeImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bindingImage="@{shoe.image}"
+                />
+            <TextView
+                android:id="@+id/shoeNameView"
+                style="@style/text_view_in_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/shoe_name(shoe.name)}"
+                />
+            <TextView
+                android:id="@+id/shoeCompanyView"
+                style="@style/text_view_in_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/shoe_company(shoe.company)}"
+                />
+            <TextView
+                android:id="@+id/shoeSizeView"
+                style="@style/text_view_in_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/shoe_size(shoe.size)}"
+                />
+            <TextView
+                android:id="@+id/shoeDescriptionView"
+                style="@style/text_view_in_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bottom_half_indent"
+                android:text="@{@string/shoe_description(shoe.description)}"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
