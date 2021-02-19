@@ -7,9 +7,12 @@
             name="addShoeViewModel"
             type="com.udacity.shoestore.screens.addshoe.AddShoeViewModel" />
     </data>
+    <!-- Used to scroll linear layout views in small screen !-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!-- Used linear layout with vertical orientation, because we have VStack of views,
+        and linear more powerful for it with auto constraints to top and bottom !-->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
