@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <!-- Used linearLayout with vertical orientation, because we don't need to use difficult
+    constraints in this screen. For powerful performance with 1,2 or stack of items we can use
+    linearLayout instead constraintLayout!-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!-- Used constraintLayout instead linearLayout for different view constraints, because
+         we don't need auto-top linear constraints, and we have marking more different, than in stack !-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">

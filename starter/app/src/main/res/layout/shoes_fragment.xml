@@ -6,10 +6,12 @@
             name="shoeItem"
             type="com.udacity.shoestore.customview.ShoeView" />
     </data>
+    <!-- used coordinatorLayout for location FAB on it, and using scrollView through it !-->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!-- Used to scroll linear layout items !-->
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"

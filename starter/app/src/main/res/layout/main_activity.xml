@@ -2,6 +2,9 @@
 <layout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Used linearLayout with vertical orientation, because we don't need to use difficult
+    constraints in this screen. For powerful performance with 1,2 or stack of items we can use
+    linearLayout instead constraintLayout!-->
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
